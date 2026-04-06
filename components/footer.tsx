@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div
-              className="text-2xl font-extrabold uppercase tracking-widest mb-3"
+              className="flex gap-2 items-center text-2xl font-extrabold uppercase tracking-widest mb-3"
               style={{ fontFamily: 'var(--font-barlow-condensed)' }}
             >
               <Image src="/favicon.ico" alt="Logo" width={32} height={32} />

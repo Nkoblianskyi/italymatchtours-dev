@@ -20,7 +20,7 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-mono text-xl font-800 uppercase tracking-widest text-foreground hover:text-primary transition-colors"
+          className="flex gap-2 items-center font-mono text-xl font-800 uppercase tracking-widest text-foreground hover:text-primary transition-colors"
           style={{ fontFamily: 'var(--font-barlow-condensed)', fontWeight: 800 }}
         >
           <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
