@@ -170,14 +170,14 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 p-4 bg-background border border-brand-border rounded">
-                
+
                 <div>
                   <div className="text-sm font-bold text-foreground">Operatore Registrato</div>
                   <div className="text-xs text-muted-foreground">Attività regolarmente registrata a Cipro</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-background border border-brand-border rounded">
-                
+
                 <div>
                   <div className="text-sm font-bold text-foreground">Pagamenti Sicuri</div>
                   <div className="text-xs text-muted-foreground">Tutte le transazioni sono criptate SSL</div>

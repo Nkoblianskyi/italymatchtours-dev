@@ -6,64 +6,65 @@ import { TourCard } from '@/components/tour-card'
 import { getFeaturedTours } from '@/lib/tours-data'
 import {
   ArrowRight,
-  MapPin,
   Shield,
   Users,
   Star,
   ChevronDown,
-  Plane,
+  Compass,
   Calendar,
-  CreditCard,
+  Backpack,
   HelpCircle,
+  Wind,
+  Map,
 } from 'lucide-react'
 
 const tips = [
   {
-    icon: Plane,
+    icon: Calendar,
     title: 'Prenota con anticipo',
-    text: "I biglietti per le grandi partite europee si esauriscono rapidamente. Ti consigliamo di prenotare almeno 8-10 settimane prima dell'evento per garantirti i posti migliori.",
+    text: "I posti nei nostri tour sono limitati per garantire un\'esperienza autentica. Ti consigliamo di prenotare almeno 8-10 settimane prima della data di partenza, specialmente per i tour estivi in montagna.",
   },
   {
-    icon: Calendar,
-    title: 'Pianifica il viaggio',
-    text: "Arriva in città almeno il giorno prima della partita. Avrai tempo per esplorare, riposare ed essere in forma per l'evento. La sera del match, considera il traffico e pianifica i trasferimenti.",
+    icon: Backpack,
+    title: 'Equipaggiamento giusto',
+    text: "Ogni tour ha una lista equipaggiamento dettagliata che ti invieremo dopo la prenotazione. Investire in calzature e abbigliamento tecnici di qualità fa la differenza tra una buona e un\'eccellente esperienza.",
   },
   {
     icon: Shield,
     title: 'Assicurazione di viaggio',
-    text: "Non partire mai senza copertura assicurativa adeguata. I nostri pacchetti includono assistenza h24, ma ti raccomandiamo sempre un'assicurazione personale per voli e bagagli.",
+    text: "I nostri pacchetti includono assicurazione alpinistica o sportiva di base. Per i tour internazionali o ad alta quota raccomandiamo un\'integrazione personale con copertura per rimpatrio e soccorso aereo.",
   },
   {
-    icon: CreditCard,
-    title: 'Budget intelligente',
-    text: "Considera sempre un budget extra del 10-15% per spese impreviste: souvenir, ristorazione autonoma, attività facoltative. Avere liquidità locale è sempre consigliato.",
+    icon: Wind,
+    title: 'Preparazione fisica',
+    text: "Ogni tour ha un livello di difficoltà indicato. Ti suggeriamo di iniziare un piano di allenamento graduale almeno 6 settimane prima. Su richiesta inviamo un programma di preparazione specifico per il tour scelto.",
   },
 ]
 
 const faqs = [
   {
-    q: "I biglietti delle partite sono inclusi nel prezzo del tour?",
-    a: "Sì, tutti i nostri pacchetti includono i biglietti per la partita specificata. La categoria del posto è indicata nella descrizione di ogni tour. È possibile richiedere un upgrade a categorie superiori soggetto a disponibilità.",
+    q: "Che livello di esperienza occorre per partecipare ai vostri tour?",
+    a: "Ogni tour indica chiaramente il livello richiesto: principiante, intermedio o avanzato. Per i trek ad alta quota e i tour MTB impegnativi è consigliata esperienza specifica. Per i tour cicloturistici e le maratone accogliamo tutti i livelli. Contattaci se hai dubbi: troveremo il tour adatto a te.",
   },
   {
-    q: "Cosa succede se la partita viene rinviata o annullata?",
-    a: "In caso di rinvio ufficiale, il nostro staff ti assisterà nel riprogrammare il viaggio senza costi aggiuntivi. In caso di annullamento definitivo, verrai rimborsato integralmente entro 14 giorni lavorativi.",
+    q: "Le attrezzature (bici, moto, bastoncini) sono incluse?",
+    a: "Dipende dal tour. Nei tour ciclistici e MTB la bici è inclusa nel pacchetto base (gravel o full-suspension a seconda del percorso). Nei moto-tour il partecipante porta la propria moto; su richiesta possiamo facilitare il noleggio locale. Bastoncini da trekking inclusi in tutti i tour hiking.",
   },
   {
-    q: "I tour sono adatti anche a bambini e famiglie?",
-    a: "Assolutamente sì. Abbiamo pacchetti family con biglietti ridotti per i minori e hotel con sistemazioni familiari. Contattaci per personalizzare il tour in base alle esigenze della tua famiglia.",
+    q: "Quante persone ci sono per gruppo?",
+    a: "Lavoriamo con gruppi piccoli: da un minimo di 4 a un massimo di 10 partecipanti per i tour avventura, e fino a 8 moto per i tour motociclistici. Questa scelta garantisce un\'esperienza personalizzata, sicura e rispettosa degli ecosistemi attraversati.",
   },
   {
     q: "Come posso prenotare un tour?",
-    a: "Per prenotare un tour, utilizza il modulo di contatto nella pagina di ogni tour oppure scrivici direttamente a info@italymatchtours.com. Il nostro team ti invierà una proposta dettagliata con disponibilità e tutti i dettagli logistici entro 24 ore lavorative.",
+    a: "Utilizza il modulo di contatto presente nella pagina di ogni tour oppure scrivici direttamente a info@italymatchtours.com. Il nostro team ti risponderà entro 24 ore lavorative con disponibilità, dettagli logistici e proposta personalizzata.",
   },
   {
-    q: "I trasferimenti dall'aeroporto sono inclusi?",
-    a: "Tutti i nostri pacchetti standard includono i trasferimenti privati da/per l'aeroporto principale della città di destinazione. Il personale sarà ad attenderti all'uscita arrivi con cartello identificativo.",
+    q: "Cosa include il trasferimento da/per l\'aeroporto?",
+    a: "Tutti i pacchetti standard includono il trasferimento privato da/per l\'aeroporto principale della città di partenza. Verrai accolto all\'uscita arrivi da un membro del nostro staff con cartello identificativo.",
   },
   {
-    q: "Posso personalizzare un tour o richiedere un pacchetto su misura?",
-    a: "Certamente. Il nostro team è specializzato nella creazione di esperienze su misura. Dalla scelta della partita alla categoria dei biglietti, dalle escursioni agli hotel, possiamo costruire il tour perfetto per te.",
+    q: "Posso personalizzare un tour o richiedere un itinerario su misura?",
+    a: "Assolutamente sì. Progettiamo tour completamente personalizzati per gruppi privati, aziende e famiglie. Dalla scelta dell\'itinerario alla difficoltà del percorso, dall\'alloggio al servizio catering: costruiamo l\'avventura perfetta per te.",
   },
 ]
 
@@ -77,8 +78,8 @@ export default function HomePage() {
       {/* ─── HERO ─── */}
       <section className="relative h-[80vh] min-h-[520px] max-h-[720px] flex items-end overflow-hidden">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Stadio italiano di notte"
+          src="/images/tour-trekking-alpi.jpg"
+          alt="Tour avventura in montagna"
           fill
           priority
           className="object-cover"
@@ -88,19 +89,19 @@ export default function HomePage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 pb-10 md:pb-16">
           <div className="max-w-xl">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-              Tour Sportivi · Italia &amp; Europa
+              Tour Sportivi &middot; Italia &amp; Europa
             </p>
             <h1
               className="text-5xl md:text-7xl font-extrabold uppercase leading-none text-foreground mb-5 text-balance"
               style={{ fontFamily: 'var(--font-barlow-condensed)' }}
             >
-              Vivi il Calcio
+              Vivi
               <br />
-              <span className="text-primary">dal Vivo.</span>
+              <span className="text-primary">l&apos;Avventura.</span>
             </h1>
             <p className="text-base md:text-lg text-foreground/70 leading-relaxed mb-8 max-w-sm text-pretty">
-              Pacchetti esclusivi per assistere alle partite più emozionanti d&apos;Europa. Hotel, biglietti e
-              trasferimenti inclusi.
+              Velo-tour, moto-tour, maratone, trekking d&apos;alta quota e mountain bike. Esperienze sportive
+              autentiche in Italia e in tutta Europa, con guida esperta inclusa.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -119,7 +120,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll hint */}
         <div className="absolute bottom-6 right-6 hidden md:flex flex-col items-center gap-1 text-foreground/40 animate-bounce">
           <ChevronDown size={18} />
         </div>
@@ -155,21 +155,22 @@ export default function HomePage() {
               className="text-4xl md:text-5xl font-extrabold uppercase leading-tight text-foreground mb-5 text-balance"
               style={{ fontFamily: 'var(--font-barlow-condensed)' }}
             >
-              Esperienza e Passione per il Calcio
+              Esperienza e Passione per lo Sport
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4 text-pretty">
-              Italy Match Tours nasce dalla passione condivisa per il calcio e il viaggio. Siamo un team di specialisti
-              in turismo sportivo con sede a Nicosia, Cipro, e un network consolidato in tutta Europa.
+              Italy Match Tours nasce dalla passione per lo sport attivo e il viaggio autentico. Siamo un team di guide
+              certificate e specialisti in turismo sportivo con sede a Nicosia, Cipro, e un network consolidato in
+              tutta Europa.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 text-pretty">
-              Da oltre 12 anni organizziamo esperienze indimenticabili per tifosi italiani ed europei, combinando i
-              migliori biglietti con hotel selezionati e trasferimenti privati.
+              Da oltre 12 anni organizziamo velo-tour, moto-tour, maratone, trekking e avventure in mountain bike per
+              sportivi di tutti i livelli, combinando la sfida atletica con l&apos;esplorazione culturale del territorio.
             </p>
             <div className="flex flex-col gap-3 mb-7">
               {[
-                { icon: Shield, text: 'Biglietti garantiti e autenticati' },
-                { icon: Users, text: 'Assistenza personale prima e durante il tour' },
-                { icon: Star, text: 'Esperienze personalizzabili su richiesta' },
+                { icon: Shield, text: 'Guide certificate e assicurazione inclusa' },
+                { icon: Users, text: 'Gruppi piccoli, esperienza personalizzata' },
+                { icon: Star, text: 'Itinerari costruiti da sportivi per sportivi' },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
                   <item.icon size={16} className="text-primary flex-shrink-0" />
@@ -263,22 +264,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-border">
             {[
               {
-                tag: 'Il Tuo Posto',
-                headline: 'Biglietti Autentici, Posti Premium',
-                body: "Collaboriamo direttamente con i migliori canali ufficiali per garantirti biglietti autentici nelle migliori categorie. Niente rivenditori di seconda mano, niente sorprese.",
-                icon: '⚡',
+                tag: 'Le tue Guide',
+                headline: 'Certified & Passionate',
+                body: "Tutte le nostre guide sono certificate UIAGM, federazione nazionale di ciclismo o licenziate FMI. Prima di condurre un tour, ogni percorso viene ricognito in ogni stagione per garantire sicurezza e qualità.",
+                icon: Compass,
               },
               {
-                tag: 'Il Tuo Hotel',
-                headline: 'Sistemazioni Selezionate',
-                body: "Ogni hotel nei nostri pacchetti è visitato e valutato dal nostro team. Scegliamo strutture nel cuore della città, a breve distanza dagli impianti e dai principali punti di interesse.",
-                icon: '🏆',
+                tag: 'Il tuo Alloggio',
+                headline: 'Selezionato sul Territorio',
+                body: "Agriturismi biologici, rifugi alpini tradizionali, masi tirolesi, paradores storici. Ogni struttura nei nostri pacchetti è visitata e approvata dal nostro team: nessun compromesso sulla qualità.",
+                icon: Map,
               },
               {
-                tag: 'La Tua Esperienza',
-                headline: 'Molto Più di una Partita',
-                body: "Un tour Italy Match non è solo una partita: è una immersione culturale nella città ospitante. Visite guidate, ristoranti locali, esperienze uniche e ricordi duraturi.",
-                icon: '🌍',
+                tag: 'La tua Avventura',
+                headline: 'Molto più di un Tour',
+                body: "Un\'esperienza Italy Match Tours non finisce con l\'attività sportiva: include la cultura locale, i sapori del territorio, i racconti delle guide e la magia dei luoghi attraversati. Ricordi che durano.",
+                icon: Star,
               },
             ].map((item) => (
               <div key={item.tag} className="bg-brand-surface p-8 md:p-10">
@@ -308,7 +309,7 @@ export default function HomePage() {
               Domande Frequenti
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Non trovi la risposta che cerchi? Il nostro team è sempre disponibile.
+              Non trovi la risposta che cerchi? Il nostro team sportivo &egrave; sempre disponibile.
             </p>
             <Link
               href="/contact"
@@ -345,7 +346,7 @@ export default function HomePage() {
       {/* ─── CTA BANNER ─── */}
       <section className="relative py-20 overflow-hidden">
         <Image
-          src="/images/tips-bg.jpg"
+          src="/images/tour-moto-dolomiti.jpg"
           alt="Pianifica il tuo prossimo tour sportivo"
           fill
           className="object-cover"
@@ -357,12 +358,12 @@ export default function HomePage() {
             className="text-4xl md:text-6xl font-extrabold uppercase leading-tight text-foreground mb-5 text-balance"
             style={{ fontFamily: 'var(--font-barlow-condensed)' }}
           >
-            Il Tuo Prossimo Match Ti Aspetta
+            La Tua Prossima Avventura Ti Aspetta
           </h2>
-            <p className="text-muted-foreground mb-8 text-pretty">
-              Scegli tra gli oltre 38 tour disponibili in Italia e in Europa. Contattaci per ricevere tutti i dettagli e
-              costruire il tuo pacchetto su misura.
-            </p>
+          <p className="text-muted-foreground mb-8 text-pretty">
+            Scegli tra i tour disponibili in Italia e in Europa. Contattaci per ricevere tutti i dettagli e
+            costruire il tuo pacchetto su misura.
+          </p>
           <Link
             href="/tours"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest rounded hover:opacity-90 transition-opacity"

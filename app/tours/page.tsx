@@ -9,7 +9,7 @@ import { tours, Tour } from '@/lib/tours-data'
 import { Search, SlidersHorizontal, X } from 'lucide-react'
 
 type RegionFilter = 'tutti' | 'italia' | 'europa'
-type SportFilter = 'tutti' | 'calcio' | 'tennis' | 'atletica' | 'ciclismo'
+type SportFilter = 'tutti' | 'ciclismo' | 'moto' | 'maratona' | 'trekking' | 'mtb' | 'triathlon'
 type SortOption = 'data' | 'durata-asc' | 'durata-desc'
 
 const regionLabels: Record<RegionFilter, string> = {
@@ -20,10 +20,12 @@ const regionLabels: Record<RegionFilter, string> = {
 
 const sportLabels: Record<SportFilter, string> = {
   tutti: 'Tutti gli Sport',
-  calcio: 'Calcio',
-  tennis: 'Tennis',
-  atletica: 'Atletica',
   ciclismo: 'Ciclismo',
+  moto: 'Moto Tour',
+  maratona: 'Maratona',
+  trekking: 'Trekking',
+  mtb: 'Mountain Bike',
+  triathlon: 'Triathlon',
 }
 
 const sortLabels: Record<SortOption, string> = {
@@ -81,7 +83,7 @@ export default function ToursPage() {
       {/* Page Header */}
       <section className="relative pt-28 pb-14 overflow-hidden">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/tour-ciclismo-toscana.jpg"
           alt="Catalogo tour sportivi"
           fill
           className="object-cover opacity-25"
