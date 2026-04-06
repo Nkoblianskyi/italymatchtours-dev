@@ -137,32 +137,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16 max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Le Persone</p>
-          <h2
-            className="text-4xl font-extrabold uppercase text-foreground"
-            style={{ fontFamily: 'var(--font-barlow-condensed)' }}
-          >
-            Il Nostro Team
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {team.map((member) => (
-            <div key={member.name} className="bg-brand-surface border border-brand-border rounded p-6">
-              <h3
-                className="text-xl font-extrabold uppercase text-foreground mb-1"
-                style={{ fontFamily: 'var(--font-barlow-condensed)' }}
-              >
-                {member.name}
-              </h3>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">{member.role}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Company Info */}
       <section className="py-16 bg-brand-surface border-y border-brand-border">
