@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ArrowRight, Shield, Users, Star, Globe, Heart, Award } from 'lucide-react'
+import { ArrowRight, Shield, Award } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -13,22 +13,21 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: Heart,
+
     title: 'Passione',
     text: "Il calcio è la nostra passione prima ancora che il nostro lavoro. Ogni tour nasce dall'entusiasmo autentico per lo sport e per i viaggi.",
   },
   {
-    icon: Shield,
+
     title: 'Affidabilità',
     text: 'Biglietti autentici, hotel verificati, trasferimenti puntuali. La nostra reputazione si costruisce sulla fiducia dei nostri clienti.',
   },
   {
-    icon: Star,
     title: 'Eccellenza',
     text: 'Non ci accontentiamo del minimo indispensabile. Ogni dettaglio del tour è curato per offrire un\'esperienza superiore alle aspettative.',
   },
   {
-    icon: Globe,
+
     title: 'Connessioni',
     text: 'Un network consolidato in tutta Europa ci permette di garantire biglietti nelle migliori categorie e accessi esclusivi.',
   },
@@ -124,9 +123,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div key={v.title} className="bg-background border border-brand-border rounded p-6 hover:border-primary transition-colors">
-                <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center mb-4">
-                  <v.icon size={20} className="text-primary" />
-                </div>
+
                 <h3
                   className="text-xl font-extrabold uppercase text-foreground mb-2"
                   style={{ fontFamily: 'var(--font-barlow-condensed)' }}
@@ -154,9 +151,6 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {team.map((member) => (
             <div key={member.name} className="bg-brand-surface border border-brand-border rounded p-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <Users size={24} className="text-primary" />
-              </div>
               <h3
                 className="text-xl font-extrabold uppercase text-foreground mb-1"
                 style={{ fontFamily: 'var(--font-barlow-condensed)' }}
@@ -202,14 +196,14 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 p-4 bg-background border border-brand-border rounded">
-                <Award size={20} className="text-primary flex-shrink-0" />
+                
                 <div>
                   <div className="text-sm font-bold text-foreground">Operatore Registrato</div>
                   <div className="text-xs text-muted-foreground">Attività regolarmente registrata a Cipro</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-background border border-brand-border rounded">
-                <Shield size={20} className="text-primary flex-shrink-0" />
+                
                 <div>
                   <div className="text-sm font-bold text-foreground">Pagamenti Sicuri</div>
                   <div className="text-xs text-muted-foreground">Tutte le transazioni sono criptate SSL</div>
