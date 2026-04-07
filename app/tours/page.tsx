@@ -9,7 +9,7 @@ import { tours, Tour } from '@/lib/tours-data'
 import { Search, SlidersHorizontal, X } from 'lucide-react'
 
 type RegionFilter = 'tutti' | 'italia' | 'europa'
-type SportFilter = 'tutti' | 'ciclismo' | 'moto' | 'maratona' | 'trekking' | 'mtb' | 'triathlon'
+type CategoryFilter = 'tutti' | 'bici' | 'moto' | 'trekking' | 'mtb'
 type SortOption = 'data' | 'durata-asc' | 'durata-desc'
 
 const regionLabels: Record<RegionFilter, string> = {
@@ -18,14 +18,12 @@ const regionLabels: Record<RegionFilter, string> = {
   europa: 'Europa',
 }
 
-const sportLabels: Record<SportFilter, string> = {
-  tutti: 'Tutti gli Sport',
-  ciclismo: 'Ciclismo',
+const categoryLabels: Record<CategoryFilter, string> = {
+  tutti: 'Tutte le Attività',
+  bici: 'Bici',
   moto: 'Moto Tour',
-  maratona: 'Maratona',
   trekking: 'Trekking',
   mtb: 'Mountain Bike',
-  triathlon: 'Triathlon',
 }
 
 const sortLabels: Record<SortOption, string> = {
@@ -37,7 +35,7 @@ const sortLabels: Record<SortOption, string> = {
 export default function ToursPage() {
   const [search, setSearch] = useState('')
   const [region, setRegion] = useState<RegionFilter>('tutti')
-  const [sport, setSport] = useState<SportFilter>('tutti')
+  const [category, setCategory] = useState<CategoryFilter>('tutti')
   const [sort, setSort] = useState<SortOption>('data')
   const [filtersOpen, setFiltersOpen] = useState(false)
 
@@ -55,7 +53,7 @@ export default function ToursPage() {
     }
 
     if (region !== 'tutti') result = result.filter((t) => t.region === region)
-    if (sport !== 'tutti') result = result.filter((t) => t.sport === sport)
+    if (category !== 'tutti') result = result.filter((t) => t.categoria === category)
 
     result.sort((a, b) => {
       if (sort === 'data') return a.dateStart.localeCompare(b.dateStart)
@@ -65,13 +63,13 @@ export default function ToursPage() {
     })
 
     return result
-  }, [search, region, sport, sort])
+  }, [search, region, category, sort])
 
-  const hasActiveFilters = region !== 'tutti' || sport !== 'tutti' || search.trim()
+  const hasActiveFilters = region !== 'tutti' || category !== 'tutti' || search.trim()
 
   const resetFilters = () => {
     setRegion('tutti')
-    setSport('tutti')
+    setCategory('tutti')
     setSearch('')
     setSort('data')
   }
@@ -84,7 +82,7 @@ export default function ToursPage() {
       <section className="relative pt-28 pb-14 overflow-hidden">
         <Image
           src="/images/tour-ciclismo-toscana.jpg"
-          alt="Catalogo tour sportivi"
+          alt="Catalogo tour"
           fill
           className="object-cover opacity-25"
         />
@@ -98,8 +96,8 @@ export default function ToursPage() {
             Tutti i Tour
           </h1>
           <p className="text-muted-foreground max-w-xl text-pretty">
-            Esplora la nostra selezione di tour sportivi in Italia e in tutta Europa. Usa i filtri per trovare
-            l&apos;esperienza perfetta per te.
+            Esplora la nostra selezione di tour in Italia e in tutta Europa. Usa i filtri per trovare l&apos;esperienza
+            più adatta a te.
           </p>
         </div>
       </section>
@@ -171,23 +169,23 @@ export default function ToursPage() {
                 </div>
               </div>
 
-              {/* Sport */}
+              {/* Activity */}
               <div>
                 <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground block mb-1.5">
-                  Sport
+                  Attività
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {(Object.keys(sportLabels) as SportFilter[]).map((key) => (
+                  {(Object.keys(categoryLabels) as CategoryFilter[]).map((key) => (
                     <button
                       key={key}
-                      onClick={() => setSport(key)}
+                      onClick={() => setCategory(key)}
                       className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wide rounded transition-colors ${
-                        sport === key
+                        category === key
                           ? 'bg-primary text-primary-foreground'
                           : 'bg-muted text-muted-foreground hover:text-foreground'
                       }`}
                     >
-                      {sportLabels[key]}
+                      {categoryLabels[key]}
                     </button>
                   ))}
                 </div>

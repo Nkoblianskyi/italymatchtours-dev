@@ -21,11 +21,11 @@ import {
   MessageCircle,
 } from 'lucide-react'
 
-const sportLabel: Record<string, string> = {
-  calcio: 'Calcio',
-  tennis: 'Tennis',
-  atletica: 'Atletica',
-  ciclismo: 'Ciclismo',
+const categoryLabel: Record<string, string> = {
+  bici: 'Bici',
+  mtb: 'Mountain Bike',
+  moto: 'Moto Tour',
+  trekking: 'Trekking',
 }
 
 export default function TourDetailPage() {
@@ -36,7 +36,7 @@ export default function TourDetailPage() {
   if (!tour) return notFound()
 
   const related = tours
-    .filter((t) => t.id !== tour.id && (t.region === tour.region || t.sport === tour.sport))
+    .filter((t) => t.id !== tour.id && (t.region === tour.region || t.categoria === tour.categoria))
     .slice(0, 3)
 
   const tourLabel = `${tour.city}, ${tour.country} — ${formatDate(tour.dateStart)}`
@@ -49,7 +49,7 @@ export default function TourDetailPage() {
       <section className="relative h-[65vh] min-h-[400px] max-h-[600px] flex items-end overflow-hidden">
         <Image
           src={tour.image}
-          alt={`Tour sportivo a ${tour.city}`}
+          alt={`Tour a ${tour.city}`}
           fill
           priority
           className="object-cover"
@@ -69,7 +69,7 @@ export default function TourDetailPage() {
               {tour.region === 'italia' ? 'Italia' : 'Europa'}
             </span>
             <span className="px-2 py-1 bg-muted text-muted-foreground text-xs font-bold uppercase tracking-widest">
-              {sportLabel[tour.sport]}
+              {categoryLabel[tour.categoria]}
             </span>
           </div>
 
@@ -156,9 +156,9 @@ export default function TourDetailPage() {
             {/* Trust badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { icon: Shield, title: 'Pagamento Sicuro', text: 'Transazioni criptate e protette' },
-                { icon: Users, title: 'Assistenza h24', text: 'Il nostro staff sempre disponibile' },
-                { icon: CheckCircle, title: 'Biglietti Garantiti', text: 'Autentici e verificati' },
+                { icon: Shield, title: 'Organizzazione', text: 'Logistica curata e checklist condivisa' },
+                { icon: Users, title: 'Assistenza', text: 'Il nostro staff è sempre disponibile' },
+                { icon: CheckCircle, title: 'Selezione', text: 'Percorsi e strutture verificati' },
               ].map((badge) => (
                 <div key={badge.title} className="flex items-start gap-3 p-4 bg-brand-surface border border-brand-border rounded">
                   <badge.icon size={18} className="text-primary flex-shrink-0 mt-0.5" />
@@ -204,8 +204,8 @@ export default function TourDetailPage() {
                       <span className="font-semibold text-foreground">{tour.duration}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Sport</span>
-                      <span className="font-semibold text-foreground">{sportLabel[tour.sport]}</span>
+                      <span className="text-muted-foreground">Attività</span>
+                      <span className="font-semibold text-foreground">{categoryLabel[tour.categoria]}</span>
                     </div>
                   </div>
                 </div>

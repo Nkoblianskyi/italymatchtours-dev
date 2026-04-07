@@ -26,7 +26,7 @@ export function TourCard({ tour, variant = 'default' }: TourCardProps) {
             <Link href={`/tours/${tour.slug}`} className="block relative w-full sm:w-64 h-52 sm:h-auto flex-shrink-0 overflow-hidden">
               <Image
                 src={tour.image}
-                alt={`Tour sportivo a ${tour.city}`}
+                alt={`Tour a ${tour.city}`}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -99,7 +99,7 @@ export function TourCard({ tour, variant = 'default' }: TourCardProps) {
         <Link href={`/tours/${tour.slug}`} className="block relative h-56 overflow-hidden flex-shrink-0">
           <Image
             src={tour.image}
-            alt={`Tour sportivo a ${tour.city}`}
+            alt={`Tour a ${tour.city}`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />

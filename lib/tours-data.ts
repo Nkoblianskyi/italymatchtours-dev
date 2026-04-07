@@ -5,7 +5,7 @@ export interface Tour {
   city: string
   country: string
   region: 'italia' | 'europa'
-  sport: 'ciclismo' | 'moto' | 'maratona' | 'trekking' | 'mtb' | 'triathlon'
+  categoria: 'bici' | 'moto' | 'trekking' | 'mtb'
   dateStart: string
   dateEnd: string
   duration: string
@@ -24,7 +24,7 @@ export const tours: Tour[] = [
     city: 'Siena',
     country: 'Italia',
     region: 'italia',
-    sport: 'ciclismo',
+    categoria: 'bici',
     dateStart: '2026-05-09',
     dateEnd: '2026-05-14',
     duration: '5 notti',
@@ -32,7 +32,7 @@ export const tours: Tour[] = [
     shortDescription:
       'Cinque giorni in sella attraverso i paesaggi più iconici della Toscana: colline senesi, vigneti del Chianti e strade bianche silenziose.',
     fullDescription:
-      'Il Grande Anello Toscano è il viaggio in bicicletta che ogni ciclista sogna almeno una volta nella vita. Partendo da Siena, il percorso si snoda tra le colline ondulate delle Crete Senesi, i vigneti del Chianti Classico, i borghi medievali di Montalcino e Pienza, e i panorami senza fine della Val d\'Orcia. Le strade bianche — tratturi di ghiaia finissima storicamente battuti dai contadini — regalano una sensazione di libertà assoluta. Ogni tappa è calibrata per unire sfida sportiva e godimento estetico: si pedala al mattino, si esplorano borghi al pomeriggio, si cena al tramonto. Il gruppo è limitato a 10 ciclisti per garantire un\'esperienza autentica e personalizzata. Bici da touring o gravel fornite dalla guida su richiesta.',
+      'Il Grande Anello Toscano è un viaggio in bicicletta tra le colline ondulate delle Crete Senesi, i vigneti del Chianti Classico, i borghi medievali di Montalcino e Pienza, e i panorami senza fine della Val d\'Orcia. Le strade bianche — tratturi di ghiaia finissima storicamente battuti dai contadini — regalano una sensazione di libertà assoluta. Ogni tappa è calibrata per unire ritmo e scoperta: si pedala al mattino, si esplorano borghi al pomeriggio, si cena al tramonto. Il gruppo è limitato a 10 persone per garantire un\'esperienza autentica e personalizzata. Bici da touring o gravel disponibili su richiesta.',
     includes: [
       '5 notti in agriturismi e dimore storiche selezionati',
       'Guida ciclistica certificata per tutto il percorso',
@@ -57,7 +57,7 @@ export const tours: Tour[] = [
     city: 'Bolzano',
     country: 'Italia',
     region: 'italia',
-    sport: 'moto',
+    categoria: 'moto',
     dateStart: '2026-06-06',
     dateEnd: '2026-06-11',
     duration: '5 notti',
@@ -65,7 +65,7 @@ export const tours: Tour[] = [
     shortDescription:
       'Sei giorni in moto tra i passi più spettacolari delle Dolomiti: curve perfette, panorami da cartolina e la libertà delle Alpi italiane.',
     fullDescription:
-      'Le Dolomiti sono la mecca di ogni motociclista europeo. Passi leggendari come lo Stelvio, il Pordoi, il Sella e il Gardena si succedono in un itinerario costruito appositamente per chi vuole il massimo della guida su asfalto perfetto, in mezzo a pareti rocciose verticali e pascoli infiniti. Il tour parte da Bolzano e percorre un anello di circa 1.200 km in sei tappe, con soste in masi tirolesi e rifugi alpini. Le strade sono prevalentemente a traffico ridotto, scelte per la qualità dell\'asfalto e la spettacolarità delle curve. Si viaggia in gruppo di massimo 8 moto, con guida in testa e sweeper in coda. Non è richiesta esperienza agonistica, ma è consigliata esperienza su strade di montagna.',
+      'Le Dolomiti sono un paradiso per chi ama la guida su due ruote. Passi leggendari come lo Stelvio, il Pordoi, il Sella e il Gardena si succedono in un itinerario costruito per chi vuole asfalto perfetto, pareti rocciose verticali e pascoli infiniti. Il tour parte da Bolzano e percorre un anello di circa 1.200 km in sei tappe, con soste in masi tirolesi e rifugi alpini. Le strade sono prevalentemente a traffico ridotto, scelte per la qualità dell\'asfalto e la spettacolarità delle curve. Si viaggia in gruppo di massimo 8 moto, con guida in testa e sweeper in coda. È consigliata esperienza su strade di montagna.',
     includes: [
       '5 notti in masi e hotel alpini 4 stelle',
       'Guida motociclistica esperta (lead + sweep)',
@@ -85,45 +85,12 @@ export const tours: Tour[] = [
     featured: true,
   },
   {
-    id: '3',
-    slug: 'alba-sul-colosseo-maratona',
-    city: 'Roma',
-    country: 'Italia',
-    region: 'italia',
-    sport: 'maratona',
-    dateStart: '2026-05-16',
-    dateEnd: '2026-05-19',
-    duration: '3 notti',
-    image: '/images/tour-maratona-roma.jpg',
-    shortDescription:
-      'Corri all\'alba tra i monumenti di Roma: un\'esperienza di maratona guidata attraverso la storia eterna della capitale, con iscrizione alla gara inclusa.',
-    fullDescription:
-      'Correre a Roma all\'alba è un privilegio assoluto. Questo pacchetto per podisti include l\'iscrizione alla maratona cittadina di primavera, tre notti in hotel centrale e un programma di preparazione che comprende una corsa di ricognizione serale del percorso con la guida, una sessione di stretching e recovery il giorno prima della gara, e il trasferimento in zona partenza il mattino della maratona. Il percorso attraversa il Colosseo, il Circo Massimo, Castel Sant\'Angelo, Piazza Venezia e i Fori Imperiali — un palcoscenico senza pari. Per tutti i livelli, dalla 10K alla 42K completa. Il pacchetto include anche il kit atleta personalizzato con il nome del corridore.',
-    includes: [
-      '3 notti in hotel 4 stelle nel centro storico di Roma',
-      'Iscrizione alla maratona cittadina di primavera (10K, 21K o 42K)',
-      'Kit atleta personalizzato con nome',
-      'Corsa serale di ricognizione del percorso con guida',
-      'Sessione recovery e stretching guidata pre-gara',
-      'Trasferimento privato alla zona partenza',
-      'Medaglia e pasta party post-gara inclusi',
-      'Colazione energetica pre-gara in hotel',
-    ],
-    highlights: [
-      'Percorso tra Colosseo e Fori Imperiali',
-      'Iscrizione gara inclusa (10K, 21K o 42K)',
-      'Kit atleta personalizzato',
-      'Pasta party post-maratona',
-    ],
-    featured: true,
-  },
-  {
     id: '4',
     slug: 'tetto-delle-alpi-trekking',
     city: 'Courmayeur',
     country: 'Italia',
     region: 'italia',
-    sport: 'trekking',
+    categoria: 'trekking',
     dateStart: '2026-07-18',
     dateEnd: '2026-07-24',
     duration: '6 notti',
@@ -156,7 +123,7 @@ export const tours: Tour[] = [
     city: 'Catania',
     country: 'Italia',
     region: 'italia',
-    sport: 'mtb',
+    categoria: 'mtb',
     dateStart: '2026-09-19',
     dateEnd: '2026-09-24',
     duration: '5 notti',
@@ -189,7 +156,7 @@ export const tours: Tour[] = [
     city: 'Siviglia',
     country: 'Spagna',
     region: 'europa',
-    sport: 'moto',
+    categoria: 'moto',
     dateStart: '2026-10-10',
     dateEnd: '2026-10-16',
     duration: '6 notti',
@@ -222,7 +189,7 @@ export const tours: Tour[] = [
     city: 'Pamplona',
     country: 'Spagna',
     region: 'europa',
-    sport: 'trekking',
+    categoria: 'trekking',
     dateStart: '2026-08-08',
     dateEnd: '2026-08-15',
     duration: '7 notti',
@@ -248,39 +215,6 @@ export const tours: Tour[] = [
       'Massimo 8 partecipanti',
     ],
     featured: false,
-  },
-  {
-    id: '8',
-    slug: 'danubio-maratona-vienna',
-    city: 'Vienna',
-    country: 'Austria',
-    region: 'europa',
-    sport: 'maratona',
-    dateStart: '2026-09-26',
-    dateEnd: '2026-09-29',
-    duration: '3 notti',
-    image: '/images/tour-maratona-vienna.jpg',
-    shortDescription:
-      'La maratona lungo il Danubio a Vienna: tre notti nella capitale della musica per una gara indimenticabile tra architetture imperiali e aria mitteleuropea.',
-    fullDescription:
-      'Vienna è una delle maratone più amate d\'Europa per la qualità del percorso, l\'organizzazione impeccabile e la bellezza assoluta del contesto urbano. Questo pacchetto include l\'iscrizione alla maratona autunnale del Danubio, tre notti in un hotel nel primo distretto imperiale, una passeggiata serale guidata sul Ring e un piano nutrizionale pre-gara personalizzato con la nostra consulente di sport nutrition. Il percorso attraversa il Prater, il Ringstrasse, i ponti sul Danubio e si conclude nei giardini imperiali. Adatto a tutti i livelli: 10K, mezza maratona o 42K completa. Il giorno dopo la gara è dedicato al recupero con sessione di massaggio sportivo inclusa.',
-    includes: [
-      '3 notti in hotel 4 stelle nel primo distretto di Vienna',
-      'Iscrizione alla maratona del Danubio (10K, 21K o 42K)',
-      'Piano nutrizionale personalizzato pre-gara',
-      'Passeggiata guidata serale sul Ringstrasse',
-      'Kit atleta personalizzato con nome',
-      'Transfer privato da/per aeroporto',
-      'Sessione di massaggio sportivo post-gara',
-      'Cena celebrativa la sera del ritiro pettorali',
-    ],
-    highlights: [
-      'Percorso lungo il Danubio e il Prater',
-      'Piano nutrizionale personalizzato',
-      'Massaggio sportivo post-gara incluso',
-      'Cena celebrativa pre-maratona',
-    ],
-    featured: true,
   },
 ]
 
