@@ -87,7 +87,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-pretty">
               <p>
-                Italy Match Tours nasce nel 2014 da una constatazione semplice: molte persone desideravano viaggiare in
+                Italy Match Tours nasce da una constatazione semplice: molte persone desideravano viaggiare in
                 modo attivo e autentico, ma faticavano a trovare itinerari ben progettati e organizzati con cura.
               </p>
               <p>
