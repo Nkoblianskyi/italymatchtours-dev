@@ -75,7 +75,7 @@ export default function CookiePolicyPage() {
                 <strong className="text-foreground">Provider di mappe (es. Google Maps):</strong> per la visualizzazione delle destinazioni.
               </li>
               <li>
-                <strong className="text-foreground">Piattaforme di pagamento:</strong> per la sicurezza delle transazioni.
+                <strong className="text-foreground">Servizi tecnici:</strong> per garantire sicurezza e affidabilità del sito.
               </li>
             </ul>
             <p className="leading-relaxed mt-3 text-sm">

@@ -18,8 +18,8 @@ export function Footer() {
               <span className="text-muted-foreground text-base font-semibold ml-1">TOURS</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Tour sportivi esclusivi per vivere il calcio europeo dal vivo. Dall&apos;Italia all&apos;Europa, portiamo i
-              tifosi al cuore dell&apos;azione.
+              Tour d’autore in Italia e in Europa: trekking, bici, moto-tour e avventure MTB. Piccoli gruppi, logistica
+              curata e un modo autentico di vivere i luoghi.
             </p>
           </div>
 

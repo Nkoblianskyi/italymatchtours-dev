@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-5 space-y-1">
               <li>Dati di contatto: nome, cognome, indirizzo email</li>
               <li>Dati di navigazione: indirizzo IP, tipo di browser, pagine visitate, durata della visita</li>
-              <li>Dati di prenotazione: preferenze di tour, dati di pagamento (gestiti da provider certificati)</li>
+              <li>Dati di prenotazione: preferenze di tour e dati necessari alla gestione amministrativa (se applicabile)</li>
               <li>Cookie tecnici e analitici (vedi Cookie Policy)</li>
             </ul>
           </section>

@@ -8,19 +8,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Chi Siamo — Italy Match Tours',
   description:
-    'Italy Match Tours: oltre 12 anni di esperienza in tour sportivi in Italia e in Europa. Scopri la nostra storia e il nostro team.',
+    'Italy Match Tours: tour d’autore in Italia e in Europa. Scopri la nostra storia, i nostri valori e il nostro team.',
 }
 
 const values = [
   {
 
     title: 'Passione',
-    text: "Il calcio è la nostra passione prima ancora che il nostro lavoro. Ogni tour nasce dall'entusiasmo autentico per lo sport e per i viaggi.",
+    text: 'Amiamo la strada, i sentieri e la montagna. Ogni itinerario nasce dall’entusiasmo per il viaggio lento e per le esperienze autentiche.',
   },
   {
 
     title: 'Affidabilità',
-    text: 'Biglietti autentici, hotel verificati, trasferimenti puntuali. La nostra reputazione si costruisce sulla fiducia dei nostri clienti.',
+    text: 'Logistica curata, strutture selezionate, ritmi sostenibili. La nostra reputazione si costruisce sulla fiducia e sulla qualità del servizio.',
   },
   {
     title: 'Eccellenza',
@@ -29,7 +29,7 @@ const values = [
   {
 
     title: 'Connessioni',
-    text: 'Un network consolidato in tutta Europa ci permette di garantire biglietti nelle migliori categorie e accessi esclusivi.',
+    text: 'Un network di guide e partner locali ci permette di aprire porte, trovare angoli nascosti e creare esperienze su misura.',
   },
 ]
 
@@ -37,17 +37,17 @@ const team = [
   {
     name: 'Alessandro M.',
     role: 'Fondatore & Direttore',
-    bio: '20 anni di esperienza nel turismo sportivo europeo. Ex giornalista sportivo, ora dedica la sua vita a far vivere il calcio ai tifosi.',
+    bio: '20 anni di esperienza nell’organizzazione viaggi in Italia e in Europa. Cura gli itinerari e seleziona guide e partner sul territorio.',
   },
   {
     name: 'Sofia R.',
     role: 'Responsabile Tour Italia',
-    bio: 'Specialista di turismo culturale e sportivo, con un profondo amore per la cultura italiana e il suo calcio appassionato.',
+    bio: 'Specialista di turismo culturale e outdoor. Trasforma ogni tappa in una storia: luoghi, sapori e incontri autentici.',
   },
   {
     name: 'Marco D.',
     role: 'Coordinatore Europa',
-    bio: 'Poliglotta con network in Germania, Spagna, Francia e Inghilterra. Gestisce le partnership con i principali club europei.',
+    bio: 'Poliglotta con network in Germania, Spagna, Francia e Inghilterra. Coordina logistica e partner locali lungo gli itinerari.',
   },
 ]
 
@@ -69,8 +69,8 @@ export default function AboutPage() {
             La Storia di Italy Match Tours
           </h1>
           <p className="text-muted-foreground max-w-lg leading-relaxed text-pretty">
-            Nati dalla passione per il calcio e per i viaggi, oggi siamo il riferimento per chi vuole vivere le grandi
-            sfide europee dal vivo.
+            Nati dalla passione per il viaggio e per l’outdoor, creiamo tour d’autore tra Italia ed Europa: montagne,
+            strade panoramiche, sentieri e borghi.
           </p>
         </div>
       </section>
@@ -87,17 +87,16 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed text-pretty">
               <p>
-                Italy Match Tours nasce nel 2014 da una semplice constatazione: troppi tifosi italiani sognavano di
-                assistere alle grandi partite europee, ma non sapevano come organizzare un&apos;esperienza completa e
-                senza stress.
+                Italy Match Tours nasce nel 2014 da una constatazione semplice: molte persone desideravano viaggiare in
+                modo attivo e autentico, ma faticavano a trovare itinerari ben progettati e organizzati con cura.
               </p>
               <p>
-                Da quella intuizione, abbiamo costruito un servizio su misura per il tifoso moderno: non solo biglietti,
-                ma un&apos;esperienza completa che unisce lo sport alla scoperta culturale della città ospitante.
+                Da quella intuizione, abbiamo costruito un servizio su misura: non “pacchetti standard”, ma tour d’autore
+                che uniscono attività all’aria aperta, cultura locale e tempi giusti per vivere davvero i luoghi.
               </p>
               <p>
-                Oggi, con oltre 2.400 tifosi soddisfatti e 38 destinazioni attive, siamo il punto di riferimento per il
-                turismo sportivo di qualità in Italia e in Europa.
+                Oggi progettiamo esperienze in Italia e in Europa per piccoli gruppi: trekking in quota, viaggi in bici,
+                moto-tour panoramici e avventure MTB, con assistenza e logistica curate.
               </p>
             </div>
           </div>
@@ -179,8 +178,8 @@ export default function AboutPage() {
               <div className="flex items-center gap-3 p-4 bg-background border border-brand-border rounded">
 
                 <div>
-                  <div className="text-sm font-bold text-foreground">Pagamenti Sicuri</div>
-                  <div className="text-xs text-muted-foreground">Tutte le transazioni sono criptate SSL</div>
+                  <div className="text-sm font-bold text-foreground">Organizzazione Trasparente</div>
+                  <div className="text-xs text-muted-foreground">Preventivi chiari e supporto dedicato</div>
                 </div>
               </div>
             </div>
@@ -194,10 +193,10 @@ export default function AboutPage() {
           className="text-4xl md:text-5xl font-extrabold uppercase text-foreground mb-5 text-balance"
           style={{ fontFamily: 'var(--font-barlow-condensed)' }}
         >
-          Pronto a Vivere il Calcio?
+          Pronto a Partire?
         </h2>
         <p className="text-muted-foreground mb-8 text-pretty max-w-md mx-auto">
-          Esplora i nostri tour o contattaci per un pacchetto personalizzato.
+          Esplora i nostri tour o contattaci per costruire un itinerario su misura.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link

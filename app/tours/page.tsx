@@ -9,7 +9,7 @@ import { tours, Tour } from '@/lib/tours-data'
 import { Search, SlidersHorizontal, X } from 'lucide-react'
 
 type RegionFilter = 'tutti' | 'italia' | 'europa'
-type CategoryFilter = 'tutti' | 'bici' | 'moto' | 'trekking' | 'mtb'
+type CategoryFilter = 'tutti' | Tour['categoria']
 type SortOption = 'data' | 'durata-asc' | 'durata-desc'
 
 const regionLabels: Record<RegionFilter, string> = {

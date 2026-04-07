@@ -89,7 +89,7 @@ export default function HomePage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 pb-10 md:pb-16">
           <div className="max-w-xl">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">
-              Tour Sportivi &middot; Italia &amp; Europa
+              Tour d’Autore &middot; Italia &amp; Europa
             </p>
             <h1
               className="text-5xl md:text-7xl font-extrabold uppercase leading-none text-foreground mb-5 text-balance"
@@ -100,8 +100,8 @@ export default function HomePage() {
               <span className="text-primary">l&apos;Avventura.</span>
             </h1>
             <p className="text-base md:text-lg text-foreground/70 leading-relaxed mb-8 max-w-sm text-pretty">
-              Velo-tour, moto-tour, maratone, trekking d&apos;alta quota e mountain bike. Esperienze sportive
-              autentiche in Italia e in tutta Europa, con guida esperta inclusa.
+              Trekking d’alta quota, viaggi in bici, moto-tour panoramici e avventure MTB. Esperienze d’autore in Italia
+              e in tutta Europa, con guida esperta e logistica curata.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -155,22 +155,22 @@ export default function HomePage() {
               className="text-4xl md:text-5xl font-extrabold uppercase leading-tight text-foreground mb-5 text-balance"
               style={{ fontFamily: 'var(--font-barlow-condensed)' }}
             >
-              Esperienza e Passione per lo Sport
+              Esperienza e Passione per l’Outdoor
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4 text-pretty">
-              Italy Match Tours nasce dalla passione per lo sport attivo e il viaggio autentico. Siamo un team di guide
-              certificate e specialisti in turismo sportivo con sede a Nicosia, Cipro, e un network consolidato in
-              tutta Europa.
+              Italy Match Tours nasce dalla passione per l’outdoor e per il viaggio autentico. Siamo un team di guide
+              certificate e specialisti di turismo attivo con sede a Nicosia, Cipro, e un network consolidato in tutta
+              Europa.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 text-pretty">
-              Da oltre 12 anni organizziamo velo-tour, moto-tour, maratone, trekking e avventure in mountain bike per
-              sportivi di tutti i livelli, combinando la sfida atletica con l&apos;esplorazione culturale del territorio.
+              Da oltre 12 anni organizziamo trekking, viaggi in bici, moto-tour e avventure in mountain bike,
+              combinando attività all’aria aperta ed esplorazione culturale del territorio.
             </p>
             <div className="flex flex-col gap-3 mb-7">
               {[
                 { icon: Shield, text: 'Guide certificate e assicurazione inclusa' },
                 { icon: Users, text: 'Gruppi piccoli, esperienza personalizzata' },
-                { icon: Star, text: 'Itinerari costruiti da sportivi per sportivi' },
+                { icon: Star, text: 'Itinerari d’autore progettati sul territorio' },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
                   <item.icon size={16} className="text-primary flex-shrink-0" />
@@ -266,7 +266,7 @@ export default function HomePage() {
               {
                 tag: 'Le tue Guide',
                 headline: 'Certified & Passionate',
-                body: "Tutte le nostre guide sono certificate UIAGM, federazione nazionale di ciclismo o licenziate FMI. Prima di condurre un tour, ogni percorso viene ricognito in ogni stagione per garantire sicurezza e qualità.",
+                body: "Tutte le nostre guide sono certificate e selezionate sul territorio. Prima di condurre un tour, ogni percorso viene verificato in più stagioni per garantire sicurezza e qualità.",
                 icon: Compass,
               },
               {
@@ -278,7 +278,7 @@ export default function HomePage() {
               {
                 tag: 'La tua Avventura',
                 headline: 'Molto più di un Tour',
-                body: "Un\'esperienza Italy Match Tours non finisce con l\'attività sportiva: include la cultura locale, i sapori del territorio, i racconti delle guide e la magia dei luoghi attraversati. Ricordi che durano.",
+                body: "Un’esperienza Italy Match Tours non è solo attività: include cultura locale, sapori del territorio, racconti delle guide e la magia dei luoghi attraversati. Ricordi che durano.",
                 icon: Star,
               },
             ].map((item) => (
@@ -309,7 +309,7 @@ export default function HomePage() {
               Domande Frequenti
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Non trovi la risposta che cerchi? Il nostro team sportivo &egrave; sempre disponibile.
+              Non trovi la risposta che cerchi? Il nostro team &egrave; sempre disponibile.
             </p>
             <Link
               href="/contact"
@@ -347,7 +347,7 @@ export default function HomePage() {
       <section className="relative py-20 overflow-hidden">
         <Image
           src="/images/tour-moto-dolomiti.jpg"
-          alt="Pianifica il tuo prossimo tour sportivo"
+          alt="Pianifica il tuo prossimo tour"
           fill
           className="object-cover"
         />

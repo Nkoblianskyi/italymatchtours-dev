@@ -16,14 +16,14 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  title: 'Italy Match Tours — Tour Sportivi in Italia e in Europa',
+  title: 'Italy Match Tours — Tour d’Autore in Italia e in Europa',
   description:
-    'Vivi l\'emozione del calcio dal vivo con Italy Match Tours. Pacchetti esclusivi per assistere alle partite più spettacolari in Italia e in tutta Europa.',
-  keywords: 'tour sportivi, calcio, partite in diretta, Italia, Europa, turismo sportivo, pacchetti calcio',
+    'Tour d’autore in Italia e in Europa: trekking, bici, moto-tour e avventure MTB con logistica curata e piccoli gruppi.',
+  keywords: 'tour d’autore, viaggi avventura, trekking, bici, mountain bike, moto tour, Italia, Europa',
   metadataBase: new URL('https://italymatchtours.com'),
   openGraph: {
-    title: 'Italy Match Tours — Tour Sportivi in Italia e in Europa',
-    description: 'Tour sportivi esclusivi per vivere il calcio europeo dal vivo.',
+    title: 'Italy Match Tours — Tour d’Autore in Italia e in Europa',
+    description: 'Trekking, bici, moto-tour e MTB: esperienze d’autore in Italia e in Europa.',
     url: 'https://italymatchtours.com',
     siteName: 'Italy Match Tours',
     locale: 'it_IT',
